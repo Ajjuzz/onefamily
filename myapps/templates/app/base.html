@@ -1,0 +1,91 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>One Family Assist - Search Blood Donars | Donate Blood</title>
+    <meta name="title" content="One Family Assist - Search Blood Donars | Donate Blood">
+    <meta name="description" content="We One Family being together and Helping others to get the needy blood donars. Register to be a blood donor, give blood and save lives ..">
+    <meta name="keywords" content="onefamilyassist.com, onefamilyassist, blood, donars, blood donars, search, blood donars search, blood donars in india, blood donars search in india, one family, One Family, onefamily, one family assist, One Family Assist, onefamily, donar, donars search, donar search, blood, bloods, donars in india, one family blood assist, online blood bank, online bood search, blood donar register, blood donar registration, blood donar camp, blood donars website, blood groups, blood request, donate blood saves life">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="static/app/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+    
+    <!-- CSS only -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,300&display=swap');
+    </style>
+</head>
+
+<body>
+  <!-- ======================header started====================== -->
+  
+<div id="preloder">
+</div>
+
+<header>
+  <div class="my-nav navbar-fixed-top navy">
+    <div class="container">
+      <div class="row">
+        <div class="nav-items">
+          <div class="logo">
+            <a style="text-decoration: none; font-family: cursive;" href="{% url 'home' %}"><h3 style="margin-top: -5px;" class="text-white" >One <span><i class="bi bi-droplet-half text-danger"></i></span> Family</h3> <br> <p style="margin-top: -30px; margin-bottom:-11px; color:red;">Blood <span style="color: white;">Assist</span></p>
+            </a>
+          </div>
+          <div class="menu-toggle">
+            <div class="menu-hamburger"></div>
+          </div>
+          <div class="menu-items">
+            <div class="menu">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/#Donation-Factss">Donation Facts</a></li>
+                <li><a href="/#Search-Donarss">Search Donar</a></li>
+                <li><a href="{% url 'register' %}">Register Member</a></li>
+                <li><a href="/#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header> 
+
+<br><br><br>
+{% block body %}
+
+{% endblock %}
+
+      
+  <script src="static/app/js/jquery-3.2.1.min.js"></script>
+  <script src="static/app/js/script.js"></script>
+  <script>
+    $(document).ready(function()
+    {
+      var $select1=$('#state_search'),
+          $select2=$('#district_search'),
+          $options=$select2.find('option');
+          $select1.on('change',function()
+          {
+            $select2.html($options.filter('[id="'+this.value+'"]'));
+          }).trigger('change');
+  
+    });
+
+    var loader = document.getElementById('preloder');
+    window.addEventListener('load',function(){
+      loader.style.display = 'none';
+    })
+
+  
+  </script>
+  </body> 
+
+</html>

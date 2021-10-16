@@ -1,0 +1,39 @@
+{% extends 'app/base.html' %}
+
+{% block body %}
+
+
+
+<div class="container"> 
+    <br><br>
+            <table class="table table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Blood</th>
+                        <th>City</th>
+                        <th>District</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                {% for donar in donar_page%}
+                {{donar.full_name}}
+                <tbody>
+                    <td >{{forloop.counter}}</td>
+                    <td>{{donar.name}}</td>
+                    <td>{{donar.age}}</td>
+                    <td>{{donar.gender}}</td>
+                    <td>{{donar.blood}}</td>
+                    <td>{{donar.city}}</td>
+                    <td>{{donar.district}}</td>
+                    <td style="font-weight:bolder">{{donar.phoneNo}}</td>
+                </tbody>
+                {% endfor %}
+            </table>
+</div>
+    
+
+{% endblock %}
