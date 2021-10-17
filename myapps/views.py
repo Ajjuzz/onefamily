@@ -60,12 +60,13 @@ def donar(request):
     blood_search = request.POST.get('blood_search')
     state_search = request.POST.get('state_search')
     district_search =  request.POST.get('district_search')
-        
-
+            
     donar_page = Register.objects.filter( blood=blood_search, district=district_search, state=state_search).all()
-    
-    return render(request, 'app/donar.html', {'donar_page': donar_page})
-
+    if donar_page:
+        return render(request, 'app/donar.html', {'donar_page': donar_page})
+    else:
+        messages.success(request,'Sorry, Currently No donars available for your search results. We will take this request and back to you soon!')
+    return render(request, 'app/donar.html')
 
 
 def loader(requst):
