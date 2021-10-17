@@ -20,7 +20,6 @@
                     </tr>
                 </thead>
                 {% for donar in donar_page%}
-                {{donar.full_name}}
                 <tbody>
                     <td >{{forloop.counter}}</td>
                     <td>{{donar.name}}</td>
@@ -34,6 +33,20 @@
                 {% endfor %}
             </table>
 </div>
-    
+ 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% if messages %}
+  {% for msg in messages %}
+  <script>
+    Swal.fire({
+        icon: 'error',
+        title: 'No Donars Found',
+        text: '{{msg}}',
+        footer: '<a href="{% url "home" %}">Return to Home Menu</a>',
+      })
+  </script>
+  {% endfor %}
+{% endif %}
 
 {% endblock %}
