@@ -312,11 +312,18 @@ header .nav-items .menu-items .menu ul li a:hover {
   }
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 393px) {
   .slider .carousel-inner .carousel-item .carousel-caption .button-01 ul li {
     margin: 0 -12px;
   }
 }
+
+@media screen and (max-width: 342px) {
+  .slider .carousel-inner .carousel-item .carousel-caption {
+    display: none;
+  }
+}
+
 
 @media screen and (max-width: 323px) {
   .slider .carousel-inner .carousel-item .carousel-caption {
