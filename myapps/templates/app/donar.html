@@ -1,0 +1,52 @@
+{% extends 'app/base.html' %}
+
+{% block body %}
+
+
+
+<div class="container"> 
+    <br><br>
+            <table class="table table-hover text-center">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Blood</th>
+                        <th>City</th>
+                        <th>District</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                {% for donar in donar_page%}
+                <tbody>
+                    <td >{{forloop.counter}}</td>
+                    <td>{{donar.name}}</td>
+                    <td>{{donar.age}}</td>
+                    <td>{{donar.gender}}</td>
+                    <td>{{donar.blood}}</td>
+                    <td>{{donar.city}}</td>
+                    <td>{{donar.district}}</td>
+                    <td style="font-weight:bolder">{{donar.phoneNo}}</td>
+                </tbody>
+                {% endfor %}
+            </table>
+</div>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% if messages %}
+  {% for msg in messages %}
+  <script>
+    Swal.fire({
+        icon: 'error',
+        title: 'No Donars Found',
+        text: '{{msg}}',
+        footer: '<a href="{% url "home" %}">Return to Home Menu</a>',
+      })
+  </script>
+  {% endfor %}
+{% endif %}
+
+{% endblock %}

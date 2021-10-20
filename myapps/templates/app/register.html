@@ -1,0 +1,162 @@
+{% extends 'app/base.html' %}
+{% load static  %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+<body >
+  {% block body %}
+
+  <section class="bg-hero pt-5 text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <div class="mt-4 mb-4">
+                    <img src="{% static '/images/register.png' %}" width="240" alt="">
+                <h1 style="font-family: 'Patrick Hand SC', cursive;">Register Here</h1>
+                <p class="leading pt-4" style="font-family: 'Titillium Web', sans-serif;">By Registering, you get to know when your help is needed. <br> Lets Donate <span><i class="bi bi-emoji-sunglasses"></i></span></p>
+                </div>
+            </div>
+            <div class="col-sm-8 text-dark">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/register" method="post" id="PersonForm">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="name">Name *</label>
+                                            <input type="text" name="name" id="name" class="form-control" placeholder="-- Enter Name --" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="age">Age *</label>
+                                            <input type="number" id="age" required class="form-control" name="age" placeholder="-- Enter Age --" >              
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="phoneNo">Phone *</label>
+                                            <input type="number" name="phoneNo" id="phoneNo" class="form-control" placeholder="-- Enter Phone --" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="country">Country *</label>
+                                            <select name="country" id="country_search" class="form-control" required>
+                                                <option selected disabled value="">--Select country--</option>
+                                                {% for country in country_qs %}
+                                                <option value="{{country.country}}" >{{country.name}}</option>
+                                                {% endfor %}
+                                            </select>        
+                                        </div>
+                                    </div>
+                                   
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="State">State *</label>
+                                            <select name="state" id="state_search" class="form-control" required>
+                                                <option selected disabled value="">--Select state--</option>
+                                                {% for state in state_qs %}
+                                                <option value="{{state.id}}" >{{state.name}}</option>
+                                                {% endfor %}
+                                            </select>        
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="district">District *</label>
+                                            <select name="district" id="district_search" class="form-control" required>
+                                                <option selected disabled value="">--Select State--</option>
+                                                {% for district in district_qs %}
+                                                <option id="{{district.district_id}}" value="{{district.id}}">{{district.name}}</option>
+                                                {% endfor %}
+                                            </select>              
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="city">City *</label>
+                                            <input type="text" name="city" id="city" class="form-control" placeholder="-- Enter City --" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="blood-register">Blood Group *</label>
+                                            <select name="blood" id="blood-register" class="form-control" required>
+                                            <option selected disabled value="">--Select Blood--</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            </select>              
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="gender">Gender *</label>
+                                        <br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" checked>
+                                            <label class="form-check-label" for="male">
+                                            Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                                            <label class="form-check-label" for="female">
+                                            Female
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="gender" id="others" value="Others">
+                                            <label class="form-check-label" for="others">Others</label>
+                                        </div>
+                                    </div>
+
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <br> 
+                                        <button class="btn btn-primary btn-block" id="submit" type="submit" onclick="message()">Register</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+        $(document).ready(function()
+        {
+          var $select1=$('#state_search'),
+              $select2=$('#district_search'),
+              $options=$select2.find('option');
+              $select1.on('change',function()
+              {
+                $select2.html($options.filter('[value="'+this.value+'"]'));
+              }).trigger('change');
+      
+        });
+</script>
+
+
+{% endblock %}
+
+
+</body>
+</head>
+</html>
