@@ -1,9 +1,7 @@
-
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 
 /* ================================ Basic CSS =============================== */
 html,
-
 body {
   width: 100%;
   height: 100%;
@@ -49,22 +47,18 @@ a:hover {
 .container {
   max-width: 1170px;
 }
- 
 
 @media screen and (max-width: 575px) {
   .container {
     padding: 0px 15px;
     max-width: 100%;
     width: 100%;
-
   }
 }
 
 /* ================================ End of  CSS =============================== */
 
-
 /* ================================ Navbar =============================== */
-
 
 header .my-nav {
   position: fixed;
@@ -148,11 +142,9 @@ header .nav-items .logo {
   width: 30%;
   flex: 1 1 30%;
   padding: 10px;
-
 }
 header .nav-items .logo img {
   max-width: 230px;
-
 }
 @media screen and (max-width: 767.98px) {
   header .nav-items .logo {
@@ -196,20 +188,18 @@ header .nav-items .menu-items .menu.active {
   }
 }
 
-@media screen and (max-width: 1025px){
-
-  header .nav-items .menu-items .menu ul  {
+@media screen and (max-width: 1025px) {
+  header .nav-items .menu-items .menu ul {
     display: inline-block;
     margin-left: -55px;
     font-size: 14px;
-}
+  }
 }
 
-header .nav-items .menu-items .menu ul{
+header .nav-items .menu-items .menu ul {
   margin-left: 3px;
   margin-right: -25px;
 }
-
 
 header .nav-items .menu-items .menu ul li {
   display: inline-block;
@@ -253,10 +243,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   background: #fff;
 }
 
-
 /* ================================ End of navbar  =============================== */
-
-
 
 /* ================================ Slider =============================== */
 .slider {
@@ -300,23 +287,23 @@ header .nav-items .menu-items .menu ul li a:hover {
   }
 }
 
-@media screen and (max-width: 1024px){
-  .slider .carousel-inner .carousel-item .carousel-caption .carousel-head{
-    font-size: 30px ;
+@media screen and (max-width: 1024px) {
+  .slider .carousel-inner .carousel-item .carousel-caption .carousel-head {
+    font-size: 30px;
   }
-  .slider .carousel-inner .carousel-item .carousel-caption .carousel-body{
+  .slider .carousel-inner .carousel-item .carousel-caption .carousel-body {
     font-size: 17px;
   }
 }
 
 @media screen and (max-width: 425.98px) {
-  .slider .carousel-inner .carousel-item .carousel-caption .carousel-head{
+  .slider .carousel-inner .carousel-item .carousel-caption .carousel-head {
     display: none;
   }
-  .slider .carousel-inner .carousel-item .carousel-caption .carousel-body{
+  .slider .carousel-inner .carousel-item .carousel-caption .carousel-body {
     display: none;
   }
-  .slider .carousel-inner .carousel-item .carousel-caption .button-01 ul{
+  .slider .carousel-inner .carousel-item .carousel-caption .button-01 ul {
     font-size: 13px;
     top: 20%;
   }
@@ -324,6 +311,19 @@ header .nav-items .menu-items .menu ul li a:hover {
     bottom: 5%;
   }
 }
+
+@media screen and (max-width: 393px) {
+  .slider .carousel-inner .carousel-item .carousel-caption .button-01 ul li {
+    margin: 0 -12px;
+  }
+}
+
+@media screen and (max-width: 342px) {
+  .slider .carousel-inner .carousel-item .carousel-caption {
+    display: none;
+  }
+}
+
 
 @media screen and (max-width: 323px) {
   .slider .carousel-inner .carousel-item .carousel-caption {
@@ -335,10 +335,9 @@ header .nav-items .menu-items .menu ul li a:hover {
   .slider .carousel-inner .carousel-item .carousel-caption {
     top: 20%;
   }
-
 }
 .slider .carousel-inner .carousel-item .carousel-caption h2 {
-  font-size: 2.0rem;
+  font-size: 2rem;
   text-transform: uppercase;
   line-height: normal;
   letter-spacing: 0.0625rem;
@@ -348,14 +347,14 @@ header .nav-items .menu-items .menu ul li a:hover {
   font-family: "Oleo Script Swash Caps", cursive;
 }
 .slider .carousel-inner .carousel-item .carousel-caption p {
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   letter-spacing: 0.5px;
   margin: 10px 0px;
   color: #fff;
   display: block;
   line-height: 35px;
-  font-family: American Typewriter, serif
+  font-family: American Typewriter, serif;
 }
 .slider .carousel-inner .carousel-item .carousel-caption .button-01 {
   display: inline-block;
@@ -380,7 +379,6 @@ header .nav-items .menu-items .menu ul li a:hover {
   background: #fd1b5b;
   border: 1px solid #fd1b5b;
   color: #fff;
-  
 }
 .slider .carousel-inner .carousel-item .carousel-caption .button-01 ul li a {
   font-size: 0.9rem;
@@ -390,10 +388,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   text-decoration: none;
 }
 
-
 /* ================================ End of Slider =============================== */
-
-
 
 /* ================================ cards =============================== */
 
@@ -409,51 +404,39 @@ header .nav-items .menu-items .menu ul li a:hover {
   border-bottom: 3px solid rgb(245, 78, 134);
 }
 
-
 /* ================================ End of cards =============================== */
-
-
 
 /* ================================ Compactibility =============================== */
 
-#Donation-Factss , #Search-Donarss{
-  
+#Donation-Factss,
+#Search-Donarss {
   color: rgba(204, 204, 204, 0.15);
-  font-weight:lighter;
-};
+  font-weight: lighter;
+}
 
-.plus{
+.plus {
   float: right;
   border: 1px solid red;
-};
+}
 
-.facts-border{
-  font-family:  URW Bookman L, serif;
+.facts-border {
+  font-family: URW Bookman L, serif;
   font-weight: bold;
 }
-.facts-h{
-  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
-};
-
-
-
+.facts-h {
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
 
 /* ================================ End of compactibility =============================== */
 
-
-
-
 /* ================================ Search =============================== */
 
-.search-border h3{
+.search-border h3 {
   font-weight: bold;
-  font-family:  URW Bookman L, serif;
+  font-family: URW Bookman L, serif;
 }
 
-
 /* ================================ End of Search =============================== */
-
-
 
 /* ================================ register =============================== */
 
@@ -466,10 +449,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   background-size: cover;
 }
 
-
 /* ================================ End of register =============================== */
-
-
 
 /* ================================ Advertise =============================== */
 
@@ -492,14 +472,14 @@ header .nav-items .menu-items .menu ul li a:hover {
 }
 .subscribe-text {
   text-align: left;
-  width:70%;
+  width: 70%;
 }
 
-@media screen and (max-width:426px) {
-  .subscribe-text{
+@media screen and (max-width: 426px) {
+  .subscribe-text {
     width: 100%;
+  }
 }
- }
 
 .subscribe-text h3 {
   margin-top: 0px;
@@ -507,8 +487,8 @@ header .nav-items .menu-items .menu ul li a:hover {
   color: #e7263c;
   line-height: 35px;
   text-align: center;
-  font-family:New Century Schoolbook, TeX Gyre Schola, serif;
-  font-weight:500;
+  font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+  font-weight: 500;
 }
 .subscribe-button {
   padding: 12px 35px;
@@ -525,12 +505,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   color: #ffffff;
 }
 
-
-
 /* ================================ End of advertise =============================== */
-
-
-
 
 /* ================================ Contact =============================== */
 
@@ -588,7 +563,6 @@ header .nav-items .menu-items .menu ul li a:hover {
   margin-top: 30px;
 }
 
-
 .address {
   color: #242424;
   margin-top: 70px;
@@ -611,10 +585,7 @@ header .nav-items .menu-items .menu ul li a:hover {
   padding-top: 15px;
 }
 
-
-
 /* ================================ End Contact =============================== */
-
 
 /* ================================ Footer =============================== */
 
@@ -633,30 +604,27 @@ footer ul.quicklinks a {
   color: #fd0825;
   line-height: 40px;
   text-decoration: none;
-
 }
 
 /* ================================ End footer =============================== */
 
-
-
 /* ================================ Preloader =============================== */
 
-#preloder{
-  background: #000 url(https://gifimage.net/wp-content/uploads/2018/11/circle-loader-gif-2.gif) no-repeat center;
+#preloder {
+  background: #000
+    url(https://gifimage.net/wp-content/uploads/2018/11/circle-loader-gif-2.gif)
+    no-repeat center;
   background-size: 19%;
   height: 100vh;
   width: 100%;
   position: fixed;
   z-index: 100;
-} 
+}
 
-@media screen and (min-width: 1024px){
-  #preloder{
+@media screen and (min-width: 1024px) {
+  #preloder {
     background-size: 10%;
   }
 }
-  
-
 
 /* ================================ End preloader =============================== */
