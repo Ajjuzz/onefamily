@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'oneFamily-app'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_64825312C957454D853E3E3937107F36 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2C02118931024B83ADF8EF9880E871B8 }}
