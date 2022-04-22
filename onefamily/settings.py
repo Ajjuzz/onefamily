@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-tyxq03m+dp^gzk=2ycbpx!#07h%051!hd@rspzpa1v*m-ph%8p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.onefamilyassist.com','onefamilyassist.herokuapp.com','localhost','onefamilyassist.com','127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
