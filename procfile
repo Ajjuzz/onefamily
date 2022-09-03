@@ -1,0 +1,1 @@
+web: gunicorn onefamily.wsgi:application --log-file -
